@@ -1,0 +1,46 @@
+{%- from '../../components/button.njk' import default as BUTTON -%}
+{%- from '../../components/lead.njk' import default as LEAD -%}
+{%- from '../../components/news-list.njk' import default as NEWS_LIST -%}
+{% set NEWS_LIST_ITEMS = [
+  {
+    href: CONSTANTS.SITE_ROOT + '/news-detail.html',
+    category: 'お知らせ',
+    date: '2021.01.01',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/news-detail.html',
+    category: 'コラム',
+    date: '2021.01.02',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/news-detail.html',
+    category: 'ブログ',
+    date: '2021.01.03',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  }
+] -%}
+
+<div class="top-news">
+  <section class="container js-scroll-anim">
+    <div class="top-news__inner">
+      <div class="top-news__lead">
+        {{ LEAD(
+          heading='ニュース',
+          shoulder='NEWS',
+          text='テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+        ) }}
+      </div>
+      <div class="top-news__content">
+        {{ NEWS_LIST(NEWS_LIST_ITEMS) }}
+      </div>
+      <div class="top-news__button">
+        {{ BUTTON({
+          href: CONSTANTS.SITE_ROOT + '/news.html',
+          text: 'ニュース一覧'
+        }) }}
+      </div>
+    </div>
+  </section>
+</div>

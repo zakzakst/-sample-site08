@@ -6,7 +6,7 @@ const environment = 'production';
 module.exports = {
   entry: {
     script: './src/js/script.js',
-    top: './src/js/top.js',
+    // top: './src/js/top.js',
   },
   resolve: {
     extensions: ['.js'],

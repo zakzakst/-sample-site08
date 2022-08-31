@@ -1,0 +1,65 @@
+{%- from '../../components/news-list.njk' import default as NEWS_LIST -%}
+{% set NEWS_LIST_ITEMS = [
+  {
+    href: CONSTANTS.SITE_ROOT + '/news-detail.html',
+    category: 'お知らせ',
+    date: '2021.01.01',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/news-detail.html',
+    category: 'コラム',
+    date: '2021.01.02',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/news-detail.html',
+    category: 'ブログ',
+    date: '2021.01.03',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/news-detail.html',
+    category: 'お知らせ',
+    date: '2021.01.01',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/news-detail.html',
+    category: 'コラム',
+    date: '2021.01.02',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/news-detail.html',
+    category: 'ブログ',
+    date: '2021.01.03',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/news-detail.html',
+    category: 'お知らせ',
+    date: '2021.01.01',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/news-detail.html',
+    category: 'コラム',
+    date: '2021.01.02',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/news-detail.html',
+    category: 'ブログ',
+    date: '2021.01.03',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/news-detail.html',
+    category: 'お知らせ',
+    date: '2021.01.01',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  }
+] -%}
+
+{{ NEWS_LIST(NEWS_LIST_ITEMS) }}

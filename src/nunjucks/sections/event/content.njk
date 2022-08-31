@@ -1,0 +1,33 @@
+{%- from '../../components/event-list-lg.njk' import default as EVENT_LIST_LG -%}
+{% set EVENT_LIST_LG_ITEMS = [
+  {
+    href: CONSTANTS.SITE_ROOT + '/event-detail.html',
+    img: CONSTANTS.SITE_ROOT + 'img/top/event/thumb_01.jpg',
+    date: '2021.01.01',
+    title: 'イベント名が入ります。イベント名が入ります。',
+    text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/event-detail.html',
+    img: CONSTANTS.SITE_ROOT + 'img/top/event/thumb_02.jpg',
+    date: '2021.01.02',
+    title: 'イベント名が入ります。イベント名が入ります。',
+    text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。<br>イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/event-detail.html',
+    img: CONSTANTS.SITE_ROOT + 'img/top/event/thumb_03.jpg',
+    date: '2021.01.03',
+    title: 'イベント名が入ります。イベント名が入ります。',
+    text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/event-detail.html',
+    img: CONSTANTS.SITE_ROOT + 'img/top/event/thumb_01.jpg',
+    date: '2021.01.04',
+    title: 'イベント名が入ります。イベント名が入ります。',
+    text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。<br>イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+  }
+] -%}
+
+{{ EVENT_LIST_LG(EVENT_LIST_LG_ITEMS) }}

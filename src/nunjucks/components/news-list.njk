@@ -1,0 +1,15 @@
+{% macro default(ITEMS)%}
+<ul class="news-list">
+  {% for ITEM in ITEMS %}
+    <li>
+      <a href="{{ ITEM.href }}" class="news-list__item">
+        <div class="news-list__head">
+          <span class="news-list__head-category">{{ ITEM.category }}</span>
+          <span class="news-list__head-date">{{ ITEM.date }}</span>
+        </div>
+        <div class="news-list__text">{{ ITEM.text }}</div>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+{% endmacro %}

@@ -1,0 +1,55 @@
+@use "sass:map";
+@use "../global" as g;
+
+// マージン・パディング
+$margin_names: (
+  m: margin,
+  mt: margin-top,
+  mb: margin-bottom,
+  ml: margin-left,
+  mr: margin-right,
+);
+
+$padding_names: (
+  p: padding,
+  pt: padding-top,
+  pb: padding-bottom,
+  pl: padding-left,
+  pr: padding-right,
+);
+
+@each $name_key, $name in map-merge($margin_names, $padding_names) {
+  @each $space_key, $space in g.$spaces {
+    // デバイスサイズの指定なし
+    .#{$name_key}-#{$space_key} {
+      @if $space_key == auto {
+        #{$name}: #{$space} !important;
+      } @else {
+        #{$name}: #{$space}px !important;
+      }
+    }
+    // デバイスサイズの指定あり
+    @each $break_point_key, $break_point in g.$break_points {
+      .#{$name_key}-#{$break_point_key}-#{$space_key} {
+        @media screen and (min-width: #{$break_point}) {
+          @if $space_key == auto {
+            #{$name}: #{$space} !important;
+          } @else {
+            #{$name}: #{$space}px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// コンテナ
+.container {
+  position: relative;
+  @include g.Container();
+  &.is-single {
+    @include g.Mq(md) {
+      max-width: map.get(g.$width_containers, md) !important;
+    }
+  }
+}

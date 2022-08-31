@@ -1,0 +1,10 @@
+{% macro default(ITEMS) %}
+<div class="info-list">
+  {% for ITEM in ITEMS %}
+    <dl class="info-list__item">
+      <dt>{{ ITEM.term }}</dt>
+      <dd>{{ ITEM.description | safe }}</dd>
+    </dl>
+  {% endfor %}
+</div>
+{% endmacro %}

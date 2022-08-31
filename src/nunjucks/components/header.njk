@@ -1,0 +1,39 @@
+{% set HEADER_ITEMS = [
+  {
+    href: CONSTANTS.SITE_ROOT + '/',
+    label: 'TOP'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/news.html',
+    label: 'NEWS'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/event.html',
+    label: 'EVENT'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/contact.html',
+    label: 'CONTACT'
+  }
+] %}
+
+<!-- ▼▼▼ ヘッダー ▼▼▼ -->
+<header class="header">
+  <div class="header-button__wrapper js-fix-content">
+    <a href="#" id="js-header-button" class="header-button">
+      <div class="header-button__bar">
+        <div class="header-button__bar-item"></div>
+        <div class="header-button__bar-item"></div>
+        <div class="header-button__bar-item"></div>
+      </div>
+    </a>
+  </div>
+  <div id="js-header-menu" class="header-menu js-fix-content">
+    <ul class="header-menu__items">
+      {% for ITEM in HEADER_ITEMS %}
+        <li><a href="{{ ITEM.href }}" class="header-menu__item">{{ ITEM.label }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</header>
+<!-- ▲▲▲ ヘッダー ▲▲▲ -->

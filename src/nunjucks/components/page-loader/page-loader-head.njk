@@ -1,0 +1,81 @@
+<!-- ▼▼▼ ページローダーCSS ▼▼▼ -->
+<style>
+.loader {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 10000;
+}
+.loader__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #345017;
+}
+.loader__content {
+  position: relative;
+  z-index: 1;
+}
+.loader__content > span {
+  display: inline-block;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  animation: loaderAnim 2.5s infinite;
+}
+.loader__content > span:nth-child(1) { animation-delay: 0.15s; }
+.loader__content > span:nth-child(2) { animation-delay: 0.3s; }
+.loader__content > span:nth-child(3) { animation-delay: 0.45s; }
+.loader__content > span:nth-child(4) { animation-delay: 0.6s; }
+.loader__content > span:nth-child(5) { animation-delay: 0.75s; }
+.loader__content > span:nth-child(6) { animation-delay: 0.9s; }
+.loader__content > span:nth-child(7) { animation-delay: 1.05s; }
+.loader__content > span:nth-child(8) { animation-delay: 1.2s; }
+.loader__content > span:nth-child(9) { animation-delay: 1.35s; }
+.loader__content > span:nth-child(10) { animation-delay: 1.5s; }
+@keyframes loaderAnim {
+  0% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-6px);
+  }
+  40% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+</style>
+<!-- ▲▲▲ ページローダーCSS ▲▲▲ -->
+
+{# 「gulp-htmlmin」での圧縮が効かなかったため、元の記述をVScode側で圧縮しておく #}
+{# <script>
+  const loaderEl = document.getElementById('js-loader');
+  if (loaderEl) {
+    document.documentElement.style.overflow = 'hidden';
+    setTimeout(() => {
+      const loaderElDisplay = document.defaultView.getComputedStyle(loaderEl, null).display;
+      if (loaderElDisplay === 'flex') {
+        loaderEl.style.display = 'none';
+        document.documentElement.style.overflow = null;
+      }
+    }, 10000);
+  }
+</script> #}
+
+<!-- ▼▼▼ ページローダーJS ▼▼▼ -->
+<script>const loaderEl=document.getElementById('js-loader');if(loaderEl){document.documentElement.style.overflow='hidden';setTimeout(()=>{const loaderElDisplay=document.defaultView.getComputedStyle(loaderEl,null).display;if(loaderElDisplay==='flex'){loaderEl.style.display='none';document.documentElement.style.overflow=null}},10000)}</script>
+<!-- ▲▲▲ ページローダーJS ▲▲▲ -->

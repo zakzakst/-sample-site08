@@ -1,0 +1,17 @@
+{% macro default(
+  heading='',
+  shoulder='',
+  text='',
+  align=''
+)%}
+{% if (align == 'right') %}
+<div class="lead is-align-right">
+{% else %}
+<div class="lead">
+{% endif %}
+  <h2 class="lead__heading">
+    <span class="lead__shoulder">{{ shoulder }}</span>{{ heading }}
+  </h2>
+  <p class="lead__text">{{ text | safe }}</p>
+</div>
+{% endmacro %}

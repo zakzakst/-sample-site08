@@ -1,0 +1,26 @@
+@use "sass:map";
+@use "variables" as v;
+
+@mixin Mq($name) {
+  @media screen and (min-width: map.get(v.$break_points, $name)) {
+    @content;
+  }
+}
+
+@mixin Container() {
+  width: 100%;
+  max-width: 325px;
+  margin: 0 auto;
+  @each $break_point_key, $break_point in v.$break_points {
+    @media screen and (min-width: #{$break_point}) {
+      max-width: map.get(v.$width_containers, $break_point_key);
+    }
+  }
+}
+
+@mixin HoverOp() {
+  transition: opacity v.$duration_default v.$ease_default;
+  &:hover {
+    opacity: v.$op_default;
+  }
+}

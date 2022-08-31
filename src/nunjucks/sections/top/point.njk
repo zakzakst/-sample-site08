@@ -1,0 +1,39 @@
+{% set POINT_ITEMS = [
+  {
+    shoulder: 'POINT 01',
+    heading: '見出しが入ります',
+    text: '<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p><p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>',
+    img: 'img_01.jpg'
+  },
+  {
+    shoulder: 'POINT 02',
+    heading: '見出しが入ります',
+    text: '<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p><p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>',
+    img: 'img_02.jpg'
+  },
+  {
+    shoulder: 'POINT 03',
+    heading: '見出しが入ります',
+    text: '<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p><p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>',
+    img: 'img_03.jpg'
+  }
+] -%}
+
+<!-- ▼▼▼ ポイント ▼▼▼ -->
+<div class="top-point__wrapper">
+  <div class="container">
+    {% for ITEM in POINT_ITEMS %}
+      <div class="top-point js-scroll-anim">
+        <div class="top-point__content">
+          <p class="top-point__shoulder"><span>{{ ITEM.shoulder }}</span></p>
+          <h3 class="top-point__heading">{{ ITEM.heading }}</h3>
+          <div class="top-point__text">{{ ITEM.text | safe }}</div>
+        </div>
+        <div class="top-point__img">
+          <img src="/{{ CONSTANTS.SITE_ROOT }}img/top/point/{{ ITEM.img }}" alt="">
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- ▲▲▲ ポイント ▲▲▲ -->

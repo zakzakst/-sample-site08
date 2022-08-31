@@ -1,0 +1,18 @@
+{% macro default(ITEMS)%}
+<ul class="event-list-lg">
+  {% for ITEM in ITEMS %}
+    <li class="event-list-lg__item">
+      <a href="{{ ITEM.href }}">
+        <div class="event-list-lg__item-head">
+          <img src="{{ ITEM.img }}" alt="" width="240" height="120">
+          <span>{{ ITEM.date }}</span>
+        </div>
+        <div class="event-list-lg__item-body">
+          <h3 class="event-list-lg__item-title">{{ ITEM.title }}</h3>
+          <p class="event-list-lg__item-text">{{ ITEM.text | safe }}</p>
+        </div>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+{% endmacro %}

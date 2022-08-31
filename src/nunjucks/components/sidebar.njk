@@ -1,0 +1,32 @@
+{% set SIDEBAR_ITEMS = [
+  {
+    href: '#',
+    label: 'サイドバー01'
+  },
+  {
+    href: '#',
+    label: 'サイドバー02'
+  },
+  {
+    href: '#',
+    label: 'サイドバー03'
+  },
+  {
+    href: '#',
+    label: 'サイドバー04'
+  },
+  {
+    href: '#',
+    label: 'サイドバー05'
+  }
+] %}
+
+<!-- ▼▼▼ サイドバー ▼▼▼ -->
+<ul class="sidebar">
+  {% for ITEM in SIDEBAR_ITEMS %}
+    <li class="sidebar__item">
+      <a href="{{ ITEM.href }}" class="sidebar__item-link">{{ ITEM.label }}</a>
+    </li>
+  {% endfor %}
+</ul>
+<!-- ▲▲▲ サイドバー ▲▲▲ -->

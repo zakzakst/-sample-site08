@@ -1,0 +1,31 @@
+{% extends 'layouts/has-aside.njk' %}
+{%- from 'components/hero.njk' import default as HERO -%}
+{% set PAGE_DATA = {
+  TITLE: 'イベント一覧ページ',
+  DESCRIPTION: 'イベント一覧ページの概要',
+  NAV: 'event'
+} %}
+
+{% block PAGE_HEAD %}
+{# <!-- ▼▼▼ 読み込みファイル（ページ専用） ▼▼▼ -->
+<link rel="stylesheet" href="/{{ CONSTANTS.SITE_ROOT }}css/event.css">
+<!-- ▲▲▲ 読み込みファイル（ページ専用） ▲▲▲ --> #}
+{% endblock %}
+
+{% block PAGE_HERO %}
+  {{ HERO({
+    title: 'イベント一覧',
+    img: 'https://picsum.photos/id/249/1200/400'
+  }) }}
+{% endblock %}
+
+{% block PAGE_CONTENT %}
+  {% include 'sections/event/content.njk' %}
+  {% include 'components/pagination.njk' %}
+{% endblock %}
+
+{% block PAGE_FOOT %}
+{# <!-- ▼▼▼ 読み込みファイル（ページ専用） ▼▼▼ -->
+<script src="/{{ CONSTANTS.SITE_ROOT }}js/event.js"></script>
+<!-- ▲▲▲ 読み込みファイル（ページ専用） ▲▲▲ --> #}
+{% endblock %}

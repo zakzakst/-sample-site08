@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  {# ▼▼▼ HEAD（共通） ▼▼▼ #}
+  {% include '../components/head/_index.njk' %}
+  {% include '../components/page-loader/page-loader-head.njk' %}
+  {# ▲▲▲ HEAD（共通） ▲▲▲ #}
+
+  {# ▼▼▼ HEAD（ページ専用） ▼▼▼ #}
+  {% block PAGE_HEAD %}
+  {% endblock %}
+  {# ▲▲▲ HEAD（ページ専用） ▲▲▲ #}
+</head>
+<body>
+  {# ▼▼▼ ページローダー ▼▼▼ #}
+  {% include '../components/page-loader/page-loader.njk' %}
+  {# ▲▲▲ ページローダー ▲▲▲ #}
+
+  {# ▼▼▼ ヘッダー ▼▼▼ #}
+  {% include '../components/header.njk' %}
+  {# ▲▲▲ ヘッダー ▲▲▲ #}
+
+  {# ▼▼▼ ヒーロー ▼▼▼ #}
+  {% block PAGE_HERO %}
+  {% endblock %}
+  {# ▲▲▲ ヒーロー ▲▲▲ #}
+
+  <div class="container layout is-single">
+    <main class="layout__main">
+      {# ▼▼▼ ページ内容 ▼▼▼ #}
+      {% block PAGE_CONTENT %}
+      {% endblock %}
+      {# ▲▲▲ ページ内容 ▲▲▲ #}
+    </main>
+  </div>
+
+  {# ▼▼▼ お問い合わせ ▼▼▼ #}
+  {# {% include '../components/contact.njk' %} #}
+  {# ▲▲▲ お問い合わせ ▲▲▲ #}
+
+  {# ▼▼▼ パンくず ▼▼▼ #}
+  {% include '../components/breadcrumb.njk' %}
+  {# ▲▲▲ パンくず ▲▲▲ #}
+
+  {# ▼▼▼ フッター ▼▼▼ #}
+  {% include '../components/footer.njk' %}
+  {# ▲▲▲ フッター ▲▲▲ #}
+
+  {# ▼▼▼ トップへ戻る ▼▼▼ #}
+  {% include '../components/go-top.njk' %}
+  {# ▲▲▲ トップへ戻る ▲▲▲ #}
+
+  {# ▼▼▼ 固定要素 ▼▼▼ #}
+  {% block FIX_CONTENT %}
+  {% endblock %}
+  {# ▲▲▲ 固定要素 ▲▲▲ #}
+
+  {# ▼▼▼ FOOT（共通） ▼▼▼ #}
+  {% include '../components/foot/_index.njk' %}
+  {# ▲▲▲ FOOT（共通） ▲▲▲ #}
+
+  {# ▼▼▼ FOOT（ページ専用） ▼▼▼ #}
+  {% block PAGE_FOOT %}
+  {% endblock %}
+  {# ▲▲▲ FOOT（ページ専用） ▲▲▲ #}
+</body>
+</html>

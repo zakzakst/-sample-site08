@@ -1,0 +1,31 @@
+{% extends 'layouts/has-aside.njk' %}
+{%- from 'components/hero.njk' import default as HERO -%}
+{% set PAGE_DATA = {
+  TITLE: 'ニュース詳細ページ',
+  DESCRIPTION: 'ニュース詳細ページの概要',
+  NAV: 'news'
+} %}
+
+{% block PAGE_HEAD %}
+{# <!-- ▼▼▼ 読み込みファイル（ページ専用） ▼▼▼ -->
+<link rel="stylesheet" href="/{{ CONSTANTS.SITE_ROOT }}css/news.css">
+<!-- ▲▲▲ 読み込みファイル（ページ専用） ▲▲▲ --> #}
+{% endblock %}
+
+{% block PAGE_HERO %}
+  {{ HERO({
+    title: 'ニュース詳細',
+    img: 'https://picsum.photos/id/249/1200/400'
+  }) }}
+{% endblock %}
+
+{% block PAGE_CONTENT %}
+  {% include 'sections/news-detail/content.njk' %}
+  {% include 'components/next-prev.njk' %}
+{% endblock %}
+
+{% block PAGE_FOOT %}
+{# <!-- ▼▼▼ 読み込みファイル（ページ専用） ▼▼▼ -->
+<script src="/{{ CONSTANTS.SITE_ROOT }}js/news.js"></script>
+<!-- ▲▲▲ 読み込みファイル（ページ専用） ▲▲▲ --> #}
+{% endblock %}

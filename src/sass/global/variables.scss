@@ -1,0 +1,86 @@
+// 定数
+$SITE_ROOT: '';
+
+// 色
+$c_primary: #345017;
+$c_primary_dark: #233610;
+$c_secondary: #f9f7dc;
+$c_accent: #cf7a1d;
+$c_white: #fff;
+$c_black: #111;
+$c_gray_dark: #333;
+$c_gray_light: #ddd;
+$c_gray_bg: #f2f2f2;
+$c_text: #4a4a4a;
+$c_text_light: #707070;
+$c_border: #707070;
+$c_border_light: #a1a1a1;
+
+// グラデーション
+$grad_primary: linear-gradient(to bottom right, $c_primary, $c_primary_dark);
+
+// デュレーション
+$duration_default: 0.5s;
+$duration_fast: 0.3s;
+
+// イージング
+$ease_default: cubic-bezier(0.61, 1, 0.88, 1);
+
+// 透明
+$op_default: 0.5;
+
+// Zインデックス
+$z_float: 10;
+$z_fixed: 100;
+$z_header: 101;
+
+// 影
+$shadow_default:
+  0 2px 1px -1px rgba($c_black, 0.2),
+  0 1px 1px 0 rgba($c_black, 0.14),
+  0 1px 3px 0 rgba($c_black, 0.12);
+$shadow_float:
+  0 7px 8px -4px rgba($c_black, 0.2),
+  0 12px 17px 2px rgba($c_black, 0.14),
+  0 5px 22px 4px  rgba($c_black, 0.12);
+
+// 角丸
+$radius_default: 4px;
+$radius_lg: 10px;
+
+// フォントファミリー
+$ff_default: YakuHanJP, 'Noto Sans JP', sans-serif,;
+$ff_en: 'Oswald', sans-serif;
+
+// 透明
+$op_default: .5;
+
+// ブレークポイント
+$break_points: (
+  sm: 576px,
+  md: 768px,
+  lg: 1020px,
+  xl: 1200px,
+  // xxl: 1400px,
+);
+
+// コンテナサイズ
+$width_containers: (
+  sm: 540px,
+  md: 720px,
+  lg: 996px,
+  xl: 1080px,
+  // xxl: 1080px,
+);
+
+// スペース
+$spaces: (
+  0: 0,
+  1: 8,
+  2: 16,
+  3: 24,
+  4: 32,
+  5: 40,
+  6: 48,
+  auto: auto,
+);

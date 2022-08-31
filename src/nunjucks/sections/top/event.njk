@@ -1,0 +1,60 @@
+{%- from '../../components/button.njk' import default as BUTTON -%}
+{%- from '../../components/lead.njk' import default as LEAD -%}
+{%- from '../../components/event-list.njk' import default as EVENT_LIST -%}
+{% set EVENT_LIST_ITEMS = [
+  {
+    href: CONSTANTS.SITE_ROOT + '/event-detail.html',
+    img: CONSTANTS.SITE_ROOT + 'img/top/event/thumb_01.jpg',
+    date: '2021.01.01',
+    title: 'イベント名が入ります。イベント名が入ります。',
+    text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/event-detail.html',
+    img: CONSTANTS.SITE_ROOT + 'img/top/event/thumb_02.jpg',
+    date: '2021.01.02',
+    title: 'イベント名が入ります。イベント名が入ります。',
+    text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。<br>イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/event-detail.html',
+    img: CONSTANTS.SITE_ROOT + 'img/top/event/thumb_03.jpg',
+    date: '2021.01.03',
+    title: 'イベント名が入ります。イベント名が入ります。',
+    text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/event-detail.html',
+    img: CONSTANTS.SITE_ROOT + 'img/top/event/thumb_01.jpg',
+    date: '2021.01.04',
+    title: 'イベント名が入ります。イベント名が入ります。',
+    text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。<br>イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+  }
+] -%}
+
+<!-- ▼▼▼ イベント ▼▼▼ -->
+<div class="top-event">
+  <section class="container js-scroll-anim">
+    <div class="top-event__inner">
+      <div class="top-event__lead">
+        {{ LEAD(
+          heading='イベント',
+          shoulder='EVENT',
+          text='テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+          align='right'
+        ) }}
+      </div>
+      <div class="top-event__content">
+        {{ EVENT_LIST(EVENT_LIST_ITEMS) }}
+      </div>
+      <div class="top-event__button">
+        {{ BUTTON({
+          href: CONSTANTS.SITE_ROOT + '/event.html',
+          text: 'イベント一覧',
+          align: 'right'
+        }) }}
+      </div>
+    </div>
+  </section>
+</div>
+<!-- ▲▲▲ イベント ▲▲▲ -->

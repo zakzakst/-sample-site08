@@ -1,0 +1,11 @@
+{% macro default(ITEM)%}
+{% if (ITEM.align == 'right') %}
+<div class="button__wrapper is-align-right">
+{% elseif (ITEM.align == 'center') %}
+<div class="button__wrapper is-align-center">
+{% else %}
+<div class="button__wrapper">
+{% endif %}
+  <a href="{{ ITEM.href }}" class="button">{{ ITEM.text }}</a>
+</div>
+{% endmacro %}

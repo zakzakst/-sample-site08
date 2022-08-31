@@ -1,0 +1,23 @@
+{%- from '../../components/button.njk' import default as BUTTON -%}
+
+<div class="form">
+  <div class="form__field">
+    <label class="form__label">名前</label>
+    <input type="text" class="form__input">
+  </div>
+  <div class="form__field">
+    <label class="form__label">メールアドレス</label>
+    <input type="email" class="form__input">
+  </div>
+  <div class="form__field">
+    <label class="form__label">お問い合わせ内容</label>
+    <textarea class="form__textarea"></textarea>
+  </div>
+  <div class="form__button">
+    {{ BUTTON({
+      href: CONSTANTS.SITE_ROOT + '/event.html',
+      text: '送信',
+      align: 'center'
+    }) }}
+  </div>
+</div>

@@ -1,0 +1,33 @@
+@use "../global" as g;
+@forward "../../../node_modules/reset-css/sass/_reset";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: g.$ff_default;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: g.$c_text;
+}
+
+a {
+  color: g.$c_text;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+img {
+  vertical-align: bottom;
+}

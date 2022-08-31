@@ -1,0 +1,33 @@
+{% set FOOTER_ITEMS = [
+  {
+    href: CONSTANTS.SITE_ROOT + '/',
+    label: 'トップ'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/news.html',
+    label: 'ニュース一覧'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/event.html',
+    label: 'イベント一覧'
+  },
+  {
+    href: CONSTANTS.SITE_ROOT + '/contact.html',
+    label: 'お問い合わせ'
+  }
+] %}
+
+<!-- ▼▼▼ フッター ▼▼▼ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <ul class="footer__links">
+        {% for ITEM in FOOTER_ITEMS %}
+          <li><a href="{{ ITEM.href }}" class="footer__link">{{ ITEM.label }}</a></li>
+        {% endfor %}
+      </ul>
+      <p class="footer__copy">Copyright ©XXXXX. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+<!-- ▲▲▲ フッター ▲▲▲ -->
