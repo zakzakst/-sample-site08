@@ -34,10 +34,10 @@ $BLOCK_NAME: '.contact';
   }
 
   &__buttons {
-    margin-top: 16px;
     display: grid;
     grid-template-columns: repeat(1, 100%);
     gap: 16px;
+    margin-top: 16px;
     @include g.Mq(md) {
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;

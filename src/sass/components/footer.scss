@@ -1,0 +1,53 @@
+@use "../global" as g;
+
+$BLOCK_NAME: '.footer';
+
+#{ $BLOCK_NAME } {
+  padding: 24px;
+  color: g.$c_white;
+  background: g.$c_primary_dark;
+
+  &__inner {
+    @include g.Mq(md) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__links {
+    margin-bottom: 12px;
+    text-align: center;
+    @include g.Mq(md) {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    & > li {
+      display: inline-block;
+      font-size: 12px;
+      line-height: 1;
+      & + li {
+        padding-left: 12px;
+        margin-left: 12px;
+        border-left: 1px solid g.$c_white;
+      }
+    }
+  }
+
+  &__link {
+    color: g.$c_white;
+    transition: opacity g.$duration_default g.$ease_default;
+    &:hover {
+      color: g.$c_white;
+      opacity: g.$op_default;
+    }
+  }
+
+  &__copy {
+    font-size: 12px;
+    color: g.$c_white;
+    text-align: center;
+    opacity: g.$op_default;
+  }
+}
