@@ -1,11 +1,17 @@
-{% macro default(ITEM)%}
-{% if (ITEM.align == 'right') %}
-<div class="button__wrapper is-align-right">
-{% elseif (ITEM.align == 'center') %}
-<div class="button__wrapper is-align-center">
+{% macro md( url="", text="" ) %}
+<a href="{{ url }}" class="button-md">
+  <span class="button-md__circle"></span>
+  <span class="button-md__text">{{ text }}</span>
+</a>
+{% endmacro %}
+
+{% macro lg( url="", text="", color="" ) %}
+{% if (color == "secondary") %}
+<a href="{{ url }}" class="button-lg --secondary">
 {% else %}
-<div class="button__wrapper">
+<a href="{{ url }}" class="button-lg">
 {% endif %}
-  <a href="{{ ITEM.href }}" class="button">{{ ITEM.text }}</a>
-</div>
+  {{ text }}
+  <span class="button-lg__arrow"></span>
+</a>
 {% endmacro %}

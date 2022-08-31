@@ -2,22 +2,23 @@
 $SITE_ROOT: '';
 
 // 色
-$c_primary: #345017;
-$c_primary_dark: #233610;
-$c_secondary: #f9f7dc;
-$c_accent: #cf7a1d;
+$c_primary: #02a2f7;
+$c_primary_dark: #00245b;
+$c_primary_light: #edf9ff;
+$c_secondary: #fffb26;
+// $c_accent: #cf7a1d;
 $c_white: #fff;
 $c_black: #111;
-$c_gray_dark: #333;
-$c_gray_light: #ddd;
-$c_gray_bg: #f2f2f2;
-$c_text: #4a4a4a;
-$c_text_light: #707070;
-$c_border: #707070;
-$c_border_light: #a1a1a1;
+// $c_gray_dark: #333;
+// $c_gray_light: #ddd;
+// $c_gray_bg: #f2f2f2;
+$c_text: #555;
+// $c_text_light: #707070;
+// $c_border: #707070;
+// $c_border_light: #a1a1a1;
 
 // グラデーション
-$grad_primary: linear-gradient(to bottom right, $c_primary, $c_primary_dark);
+// $grad_primary: linear-gradient(to bottom right, $c_primary, $c_primary_dark);
 
 // デュレーション
 $duration_default: 0.5s;
@@ -45,8 +46,8 @@ $shadow_float:
   0 5px 22px 4px  rgba($c_black, 0.12);
 
 // 角丸
-$radius_default: 4px;
-$radius_lg: 10px;
+$radius_default: 12px;
+$radius_lg: 24px;
 
 // フォントファミリー
 $ff_default: YakuHanJP, 'Noto Sans JP', sans-serif,;

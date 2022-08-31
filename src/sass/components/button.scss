@@ -1,0 +1,136 @@
+@use "../global" as g;
+
+$BLOCK_NAME: '.button';
+$SIZE_BUTTON: 48px;
+
+#{ $BLOCK_NAME }-md {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: $SIZE_BUTTON;
+  padding-left: $SIZE_BUTTON - 12px;
+  font-size: 14px;
+
+  &__circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: $SIZE_BUTTON;
+    height: $SIZE_BUTTON;
+    content: '';
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      margin: auto;
+      content: '';
+      border-radius: 50%;
+      transition: transform g.$duration_default g.$ease_default;
+    }
+    &::before {
+      background: rgba(g.$c_primary, 0.4);
+      @at-root #{ $BLOCK_NAME }-md:hover & {
+        transform: scale(1.05);
+      }
+    }
+    &::after {
+      z-index: 1;
+      width: 16px;
+      height: 16px;
+      background: g.$c_white;
+      transform: scale(0);
+      @at-root #{ $BLOCK_NAME }-md:hover & {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__text {
+    z-index: 2;
+    transition: transform g.$duration_fast g.$ease_default;
+    @at-root #{ $BLOCK_NAME }-md:hover & {
+      transform: translateX(5px);
+    }
+  }
+}
+
+#{ $BLOCK_NAME }-lg {
+  position: relative;
+  display: block;
+  padding-left: 1.5em;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 66px;
+  color: g.$c_white;
+  background: g.$c_primary;
+  border-radius: 99em;
+  box-shadow: g.$shadow_default;
+  transition: transform g.$duration_default g.$ease_default;
+  &.--secondary {
+    color: g.$c_text;
+    background: g.$c_secondary;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    right: 21px;
+    bottom: 0;
+    display: block;
+    width: 33px;
+    height: 33px;
+    margin: auto 0;
+    content: '';
+    border: 3px solid g.$c_white;
+    border-radius: 50%;
+    transition: background-color g.$duration_default g.$ease_default;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      bottom: 0;
+      display: block;
+      width: 11px;
+      height: 11px;
+      margin: auto 0;
+      content: '';
+      border: solid g.$c_white;
+      border-width: 3px 3px 0 0;
+      transition: border-color g.$duration_default g.$ease_default;
+      transform: rotate(45deg);
+    }
+    @at-root #{ $BLOCK_NAME }-lg.--secondary & {
+      border-color: g.$c_text;
+      &::before {
+        border-color: g.$c_text;
+      }
+    }
+  }
+
+  &:hover {
+    color: g.$c_white;
+    transform: scale(1.05);
+  }
+  &.--secondary:hover {
+    color: g.$c_text;
+  }
+
+  &:hover &__arrow {
+    background: g.$c_white;
+    &::before {
+      border-color: g.$c_primary;
+    }
+  }
+  &.--secondary:hover &__arrow {
+    background: g.$c_text;
+    &::before {
+      border-color: g.$c_secondary;
+    }
+  }
+}

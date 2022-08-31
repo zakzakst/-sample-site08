@@ -1,0 +1,47 @@
+@use "../global" as g;
+
+$BLOCK_NAME: '.contact';
+
+#{ $BLOCK_NAME } {
+  padding: 48px 0;
+  background: url(/#{g.$SITE_ROOT}img/common/contact_bg.jpg) no-repeat center center;
+  background-size: cover;
+
+  &__content {
+    padding: 24px;
+    margin: 0 auto;
+    background: rgba(g.$c_primary_dark, 0.8);
+    border-radius: g.$radius_default;
+    @include g.Mq(md) {
+      padding: 48px;
+    }
+  }
+
+  &__heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: g.$c_white;
+    text-align: center;
+    @include g.Mq(md) {
+      font-size: 32px;
+    }
+  }
+
+  &__lead {
+    margin-top: 12px;
+    color: g.$c_white;
+    text-align: center;
+  }
+
+  &__buttons {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    gap: 16px;
+    @include g.Mq(md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 24px;
+    }
+  }
+}

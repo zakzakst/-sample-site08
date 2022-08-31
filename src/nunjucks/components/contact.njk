@@ -1,13 +1,27 @@
+{%- from './button.njk' import lg as BUTTON -%}
+
 <!-- ▼▼▼ お問い合わせ ▼▼▼ -->
-<div class="contact">
-  <a href="{{ CONSTANTS.SITE_ROOT }}/contact.html" class="contact__link">
-    <div class="container">
-      <div class="contact__inner">
-        <h2 class="contact__heading">CONTACT</h2>
-        <p class="contact__text">ご依頼・お問い合わせ</p>
-        <div class="contact__arrow"></div>
+<section class="contact">
+  <div class="container">
+    <div class="contact__content">
+      <h2 class="contact__heading">お問い合わせ</h2>
+      <p class="contact__lead">テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+      <div class="contact__buttons">
+        <div class="col">
+          {{ BUTTON(
+            url="#",
+            text="△△について",
+            color="secondary"
+          ) }}
+        </div>
+        <div class="col">
+          {{ BUTTON(
+            url="#",
+            text="□□について"
+          ) }}
+        </div>
       </div>
     </div>
-  </a>
-</div>
+  </div>
+</section>
 <!-- ▲▲▲ お問い合わせ ▲▲▲ -->
