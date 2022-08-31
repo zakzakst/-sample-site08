@@ -1,0 +1,9 @@
+{
+  "doctype-first": false,
+  "spec-char-escape": false,
+  "id-class-value": false,
+  "inline-script-disabled": true,
+  "inline-style-disabled": true,
+  "id-class-ad-disabled": true,
+  "head-script-disabled": false
+}

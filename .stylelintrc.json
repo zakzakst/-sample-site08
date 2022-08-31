@@ -1,0 +1,24 @@
+{
+  "plugin": [
+    "stylelint-scss"
+  ],
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-prettier",
+    "stylelint-config-recommended-scss",
+    "stylelint-config-recess-order"
+  ],
+  "rules": {
+    "color-hex-case": "lower",
+    "color-hex-length": "short",
+    "function-no-unknown": null,
+    "no-duplicate-selectors": null,
+    "no-empty-source": null,
+    "no-descending-specificity": null,
+    "scss/operator-no-unspaced": null
+  },
+  "ignoreFiles": [
+    "src/sass/**/_*scss",
+    "src/sass/global/mixins.scss"
+  ]
+}
