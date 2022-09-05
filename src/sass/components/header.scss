@@ -1,0 +1,76 @@
+@use "../global" as g;
+
+$BLOCK_NAME: '.header';
+
+#{ $BLOCK_NAME } {
+  position: fixed;
+  top: 12px;
+  right: 0;
+  left: 0;
+  z-index: g.$z_header;
+  transition: transform g.$duration_default g.$ease_default;
+  // transform: translateY(-100px);
+  // &.is-active {
+  //   transform: translateY(0);
+  // }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 24px;
+    background: g.$c_white;
+    border-radius: 9999px;
+    box-shadow: g.$shadow_float;
+    @include g.Mq(md) {
+      height: 60px;
+      padding: 0 36px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    & > li {
+      width: 25%;
+      height: 100%;
+    }
+  }
+
+  &__nav-item {
+    position: relative;
+    display: block;
+    height: 100%;
+    padding: 16px 0 0;
+    font-size: 10px;
+    text-align: center;
+    transition: color g.$duration_default g.$ease_default;
+    @include g.Mq(md) {
+      padding: 16px 16px 0;
+      font-size: 16px;
+    }
+    &::after {
+      position: absolute;
+      right: 4px;
+      bottom: 4px;
+      left: 4px;
+      display: block;
+      height: 4px;
+      content: '';
+      background: g.$c_primary;
+      border-radius: 2px;
+      opacity: 0;
+      transition: opacity g.$duration_default g.$ease_default;
+    }
+    // &.is-active,
+    &:hover {
+      color: g.$c_primary;
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}

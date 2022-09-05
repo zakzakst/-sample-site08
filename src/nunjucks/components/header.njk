@@ -18,22 +18,15 @@
 ] %}
 
 <!-- ▼▼▼ ヘッダー ▼▼▼ -->
-<header class="header">
-  <div class="header-button__wrapper js-fix-content">
-    <a href="#" id="js-header-button" class="header-button">
-      <div class="header-button__bar">
-        <div class="header-button__bar-item"></div>
-        <div class="header-button__bar-item"></div>
-        <div class="header-button__bar-item"></div>
-      </div>
-    </a>
-  </div>
-  <div id="js-header-menu" class="header-menu js-fix-content">
-    <ul class="header-menu__items">
-      {% for ITEM in HEADER_ITEMS %}
-        <li><a href="{{ ITEM.href }}" class="header-menu__item">{{ ITEM.label }}</a></li>
-      {% endfor %}
-    </ul>
+<header class="header" id="js-header">
+  <div class="container">
+    <div class="header__inner">
+      <ul class="header__nav">
+        {% for ITEM in HEADER_ITEMS %}
+          <li><a href="{{ ITEM.href }}" class="header__nav-item">{{ ITEM.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </header>
 <!-- ▲▲▲ ヘッダー ▲▲▲ -->
