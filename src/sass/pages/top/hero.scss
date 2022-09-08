@@ -1,0 +1,61 @@
+@use "../../global" as g;
+
+$BLOCK_NAME: ".top-hero";
+
+#{ $BLOCK_NAME } {
+  padding: 12px 12px 0;
+  @include g.Mq(md) {
+    padding: 32px 32px 0;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 360px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 48px;
+    @include g.Mq(md) {
+      max-width: 1280px;
+      height: 480px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    & > img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    padding: 24px;
+    color: g.$c_white;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 900;
+  }
+
+  &__lead {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  // &__nav {}
+  // &__nav-items {}
+  // &__nav-item {}
+  // &__nav-link {}
+}

@@ -1,33 +1,41 @@
-{% set HERO_ITEMS = [
-  { src: 'img/top/hero/mv_01.jpg' },
-  { src: 'img/top/hero/mv_02.jpg' },
-  { src: 'img/top/hero/mv_03.jpg' }
-] -%}
+{% set TOP_HERO_NAV_ITEMS = [
+  {
+    href: '#about',
+    label: '○○について'
+  },
+  {
+    href: '#project',
+    label: 'プロジェクト'
+  },
+  {
+    href: '#facility',
+    label: '施設'
+  },
+  {
+    href: '#gallery',
+    label: 'ギャラリー'
+  }
+] %}
 
-<!-- ▼▼▼ ヒーロー ▼▼▼ -->
-<div class="top-hero__wrapper">
-  <div class="container">
-    <div class="top-hero" id="js-top-hero">
-      <div class="top-hero__content">
-        <h1 class="top-hero__title">
-          <span class="top-hero__title-line"><span>ここに</span></span>
-          <span class="top-hero__title-line"><span>タイトルが</span></span>
-          <span class="top-hero__title-line"><span>入ります</span></span>
-        </h1>
-        <p class="top-hero__lead"><span>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</span></p>
-      </div>
-      <div class="top-hero__mv-wrapper">
-        <div class="top-hero__mv">
-          {% for ITEM in HERO_ITEMS %}
-            <div class="top-hero__mv-item">
-              <div class="top-hero__mv-img-container">
-                <div class="top-hero__mv-img" data-img-src="{{ ITEM.src }}"></div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
+<section class="top-hero">
+  <div class="top-hero__content">
+    <div class="top-hero__img">
+      <img src="/{{ CONSTANTS.SITE_ROOT }}img/top/mv.jpg" alt="">
+    </div>
+    <div class="top-hero__text">
+      <h1 class="top-hero__title">タイトルが入ります</h1>
+      <p class="top-hero__lead">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
     </div>
   </div>
+</section>
+<div class="top-hero__nav" id="js-top-hero-nav">
+  <div class="container">
+    <ul class="top-hero__nav-items">
+      {% for ITEM in TOP_HERO_NAV_ITEMS %}
+        <li class="top-hero__nav-item">
+          <a href="{{ ITEM.href }}" class="top-hero__nav-link">{{ ITEM.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
-<!-- ▲▲▲ ヒーロー ▲▲▲ -->

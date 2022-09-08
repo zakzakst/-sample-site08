@@ -9,10 +9,10 @@ $BLOCK_NAME: '.header';
   left: 0;
   z-index: g.$z_header;
   transition: transform g.$duration_default g.$ease_default;
-  // transform: translateY(-100px);
-  // &.is-active {
-  //   transform: translateY(0);
-  // }
+  transform: translateY(-100px);
+  &.is-active {
+    transform: translateY(0);
+  }
 
   &__inner {
     display: flex;
