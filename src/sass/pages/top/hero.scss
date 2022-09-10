@@ -55,7 +55,45 @@ $BLOCK_NAME: ".top-hero";
   }
 
   // &__nav {}
-  // &__nav-items {}
+  &__nav-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    @include g.Mq(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
   // &__nav-item {}
-  // &__nav-link {}
+  &__nav-link {
+    position: relative;
+    display: block;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    transition: color g.$duration_default g.$ease_default;
+    @include g.Mq(md) {
+      padding: 16px;
+      font-size: 20px;
+    }
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      height: 4px;
+      content: '';
+      background: g.$c_primary;
+      border-radius: 2px;
+      opacity: 0.2;
+      transition: opacity g.$duration_default g.$ease_default;
+    }
+    &:hover {
+      color: g.$c_primary;
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
 }
