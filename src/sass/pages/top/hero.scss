@@ -54,7 +54,6 @@ $BLOCK_NAME: ".top-hero";
     margin-top: 8px;
   }
 
-  // &__nav {}
   &__nav-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -63,7 +62,7 @@ $BLOCK_NAME: ".top-hero";
       grid-template-columns: repeat(4, 1fr);
     }
   }
-  // &__nav-item {}
+  
   &__nav-link {
     position: relative;
     display: block;
