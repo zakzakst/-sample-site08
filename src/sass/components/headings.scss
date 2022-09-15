@@ -1,0 +1,75 @@
+@use "../global" as g;
+
+$BLOCK_NAME_SECTION: '.heading-section';
+$size_icon: 60px;
+$size_icon_md: 80px;
+$size_heading_decoration: 8px;
+
+#{ $BLOCK_NAME_SECTION } {
+  position: relative;
+  padding-top: $size_icon;
+  text-align: center;
+  @include g.Mq(md) {
+    padding-top: $size_icon_md * 0.9;
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 700;
+    @include g.Mq(md) {
+      font-size: 32px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: $size_icon;
+    margin: auto;
+    fill: g.$c_primary;
+    @include g.Mq(md) {
+      width: $size_icon_md;
+    }
+  }
+
+  &__lead {
+    position: relative;
+    padding-bottom: 32px;
+    margin-top: 8px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  &__lead-decoration {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: $size_heading_decoration;
+    height: $size_heading_decoration;
+    margin: auto;
+    background: g.$c_primary;
+    border-radius: 50%;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: $size_heading_decoration;
+      height: $size_heading_decoration;
+      content: '';
+      background: rgba(g.$c_primary, 0.4);
+      border-radius: 50%;
+    }
+    &::before {
+      left: -200%;
+    }
+    &::after {
+      right: -200%;
+    }
+  }
+}
