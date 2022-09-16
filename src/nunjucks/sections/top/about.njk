@@ -5,8 +5,8 @@
       'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
       'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
     ],
-    mainImg: 'img/about/main-01.jpg',
-    subImg: 'img/about/sub-01.jpg'
+    mainImg: 'about_main_01.jpg',
+    subImg: 'about_sub_01.jpg'
   },
   {
     heading: '<span>ここに見出しが</span><br><span>入ります</span>',
@@ -14,8 +14,8 @@
       'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
       'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
     ],
-    mainImg: 'img/about/main-02.jpg',
-    subImg: 'img/about/sub-02.jpg'
+    mainImg: 'about_main_02.jpg',
+    subImg: 'about_sub_02.jpg'
   },
   {
     heading: '<span>ここに見出しが</span><br><span>入ります</span>',
@@ -23,13 +23,13 @@
       'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
       'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
     ],
-    mainImg: 'img/about/main-03.jpg',
-    subImg: 'img/about/sub-03.jpg'
+    mainImg: 'about_main_03.jpg',
+    subImg: 'about_sub_03.jpg'
   }
 ] -%}
 
 <!-- ▼▼▼ アクセス ▼▼▼ -->
-<section class="about-section">
+<section class="top-about">
   <div class="container">
     <div class="heading-section">
       <div class="heading-section__icon">
@@ -45,25 +45,25 @@
       <h2 class="heading-section__text">○○について</h2>
     </div>
     <p class="heading-section__lead">
-      テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br class="d-none d-sm-block">テキストが入ります。テキストが入ります。
+      テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。
       <span class="heading-section__lead-decoration"></span>
     </p>
-    <div class="about-section__content">
+    <div class="">
       {% for ITEM in ABOUT_ITEMS %}
-        <div class="about-section__content-item row row-cols-1 row-cols-md-2 g-2 align-items-center">
-          <div class="col">
-            <h3 class="about-heading">{{ ITEM.heading | safe }}</h3>
+        <div class="">
+          <div class="">
+            <h3 class="heading">{{ ITEM.heading | safe }}</h3>
             {% for TEXT in ITEM.texts %}
-              <p class="about-text">{{ TEXT | safe }}</p>
+              <p class="">{{ TEXT | safe }}</p>
             {% endfor %}
           </div>
-          <div class="col">
-            <div class="about-img">
-              <div class="about-img__main">
-                <img src="{{ ITEM.mainImg }}" width="400" height="400" alt="">
+          <div class="">
+            <div class="top-about__img">
+              <div class="top-about__img-main">
+                <img src="/{{ CONSTANTS.SITE_ROOT }}img/top/{{ ITEM.mainImg }}" width="400" height="400" alt="">
               </div>
-              <div class="about-img__sub">
-                <img src="{{ ITEM.subImg }}" width="400" height="400" alt="">
+              <div class="top-about__img-sub">
+                <img src="/{{ CONSTANTS.SITE_ROOT }}img/top/{{ ITEM.subImg }}" width="400" height="400" alt="">
               </div>
             </div>
           </div>

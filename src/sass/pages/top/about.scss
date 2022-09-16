@@ -1,0 +1,50 @@
+@use "../../global" as g;
+
+$BLOCK_NAME: ".top-about";
+
+#{ $BLOCK_NAME } {
+  &__img {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+    @include g.Mq(md) {
+      max-width: 400px;
+      padding-left: 48px;
+      margin: 0;
+      // @at-root .about-section__content-item:nth-child(even) & {
+      //   padding-right: 48px;
+      //   padding-left: 0;
+      // }
+    }
+  }
+
+  &__img-main {
+    width: 100%;
+    aspect-ratio: 400 / 400;
+    overflow: hidden;
+    background: g.$c_white;
+    border: 6px solid g.$c_white;
+    border-radius: 50%;
+    box-shadow: g.$shadow_default;
+  }
+
+  &__img-sub {
+    position: absolute;
+    aspect-ratio: 400 / 400;
+    right: 8px;
+    bottom: 8px;
+    width: 80px;
+    overflow: hidden;
+    background: g.$c_white;
+    border: 4px solid g.$c_white;
+    border-radius: 50%;
+    box-shadow: g.$shadow_default;
+    // @at-root .about-section__content-item:nth-child(even) & {
+    //   left: 8px;
+    // }
+    @include g.Mq(lg) {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
