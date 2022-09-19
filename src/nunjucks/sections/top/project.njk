@@ -2,32 +2,32 @@
   {
     description: {
       href: '#',
-      img: 'img/project/project1-main.jpg',
+      img: 'project_1_main.jpg',
       heading: '見出しが入ります',
       text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
     },
     links: [
       {
         href: '#',
-        img: 'img/project/project1-01.jpg',
+        img: 'project_1_link_01.jpg',
         heading: '見出しが入ります',
         text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
       },
       {
         href: '#',
-        img: 'img/project/project1-02.jpg',
+        img: 'project_1_link_02.jpg',
         heading: '見出しが入ります',
         text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
       },
       {
         href: '#',
-        img: 'img/project/project1-03.jpg',
+        img: 'project_1_link_03.jpg',
         heading: '見出しが入ります',
         text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
       },
       {
         href: '#',
-        img: 'img/project/project1-04.jpg',
+        img: 'project_1_link_04.jpg',
         heading: '見出しが入ります',
         text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
       }
@@ -36,32 +36,32 @@
   {
     description: {
       href: '#',
-      img: 'img/project/project2-main.jpg',
+      img: 'project_2_main.jpg',
       heading: '見出しが入ります',
       text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
     },
     links: [
       {
         href: '#',
-        img: 'img/project/project2-01.jpg',
+        img: 'project_2_link_01.jpg',
         heading: '見出しが入ります',
         text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
       },
       {
         href: '#',
-        img: 'img/project/project2-02.jpg',
+        img: 'project_2_link_02.jpg',
         heading: '見出しが入ります',
         text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
       },
       {
         href: '#',
-        img: 'img/project/project2-03.jpg',
+        img: 'project_2_link_03.jpg',
         heading: '見出しが入ります',
         text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
       },
       {
         href: '#',
-        img: 'img/project/project2-04.jpg',
+        img: 'project_2_link_04.jpg',
         heading: '見出しが入ります',
         text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
       }
@@ -100,14 +100,14 @@
               <p>{{ ITEM.description.text }}</p>
             </div>
             <div class="">
-              {{ ITEM.description.img }}
+              <img src="/{{ CONSTANTS.SITE_ROOT }}img/top/{{ ITEM.description.img }}" alt="">
               {# {{ projects.img( img="img/project/project1-main.jpg" ) }} #}
             </div>
           </div>
           <div class="">
             {% for LINK in ITEM.links %}
               <div class="">
-                {{ LINK.img }}
+                <img src="/{{ CONSTANTS.SITE_ROOT }}img/top/{{ LINK.img }}" alt="">
                 {# {{ projects.card(
                   link=item.link,
                   img=item.img,
