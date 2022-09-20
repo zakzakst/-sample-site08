@@ -28,7 +28,7 @@
   }
 ] -%}
 
-<!-- ▼▼▼ アクセス ▼▼▼ -->
+<!-- ▼▼▼ ○○について ▼▼▼ -->
 <section class="top-about">
   <div class="container">
     <div class="heading-section">
@@ -48,23 +48,21 @@
       テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。
       <span class="heading-section__lead-decoration"></span>
     </p>
-    <div class="">
+    <div class="top-about__contents">
       {% for ITEM in ABOUT_ITEMS %}
-        <div class="">
-          <div class="">
+        <div class="top-about__content">
+          <div class="top-about__text">
             <h3 class="heading">{{ ITEM.heading | safe }}</h3>
             {% for TEXT in ITEM.texts %}
-              <p class="">{{ TEXT | safe }}</p>
+              <p class="mt-2">{{ TEXT | safe }}</p>
             {% endfor %}
           </div>
-          <div class="">
-            <div class="top-about__img">
-              <div class="top-about__img-main">
-                <img src="/{{ CONSTANTS.SITE_ROOT }}img/top/{{ ITEM.mainImg }}" width="400" height="400" alt="">
-              </div>
-              <div class="top-about__img-sub">
-                <img src="/{{ CONSTANTS.SITE_ROOT }}img/top/{{ ITEM.subImg }}" width="400" height="400" alt="">
-              </div>
+          <div class="top-about__img">
+            <div class="top-about__img-main">
+              <img src="/{{ CONSTANTS.SITE_ROOT }}img/top/{{ ITEM.mainImg }}" width="400" height="400" alt="">
+            </div>
+            <div class="top-about__img-sub">
+              <img src="/{{ CONSTANTS.SITE_ROOT }}img/top/{{ ITEM.subImg }}" width="400" height="400" alt="">
             </div>
           </div>
         </div>
@@ -72,4 +70,4 @@
     </div>
   </div>
 </section>
-<!-- ▲▲▲ アクセス ▲▲▲ -->
+<!-- ▲▲▲ ○○について ▲▲▲ -->

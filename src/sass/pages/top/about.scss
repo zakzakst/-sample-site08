@@ -3,13 +3,37 @@
 $BLOCK_NAME: ".top-about";
 
 #{ $BLOCK_NAME } {
+  &__contents {
+    margin-top: 24px;
+  }
+
+  &__content {
+    & + & {
+      margin-top: 36px;
+    }
+    @include g.Mq(md) {
+      display: flex;
+    }
+  }
+
+  &__text {
+    @include g.Mq(md) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
   &__img {
     position: relative;
     max-width: 300px;
     margin: 0 auto;
     @include g.Mq(md) {
-      max-width: 400px;
-      padding-left: 48px;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      width: 400px;
+      max-width: none;
       margin: 0;
       // @at-root .about-section__content-item:nth-child(even) & {
       //   padding-right: 48px;
