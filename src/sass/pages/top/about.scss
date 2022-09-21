@@ -3,6 +3,8 @@
 $BLOCK_NAME: ".top-about";
 
 #{ $BLOCK_NAME } {
+  margin-top: 60px;
+
   &__contents {
     margin-top: 24px;
   }
@@ -10,9 +12,15 @@ $BLOCK_NAME: ".top-about";
   &__content {
     & + & {
       margin-top: 36px;
+      @include g.Mq(lg) {
+        margin-top: 0;
+      }
     }
     @include g.Mq(md) {
       display: flex;
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
     }
   }
 
@@ -21,13 +29,19 @@ $BLOCK_NAME: ".top-about";
       display: flex;
       justify-content: center;
       flex-direction: column;
+      @at-root #{ $BLOCK_NAME }__content:nth-child(odd) & {
+        padding-right: 48px;
+      }
+      @at-root #{ $BLOCK_NAME }__content:nth-child(even) & {
+        padding-left: 48px;
+      }
     }
   }
 
   &__img {
     position: relative;
     max-width: 300px;
-    margin: 0 auto;
+    margin: 16px auto 0;
     @include g.Mq(md) {
       display: flex;
       align-items: center;
@@ -35,10 +49,6 @@ $BLOCK_NAME: ".top-about";
       width: 400px;
       max-width: none;
       margin: 0;
-      // @at-root .about-section__content-item:nth-child(even) & {
-      //   padding-right: 48px;
-      //   padding-left: 0;
-      // }
     }
   }
 
@@ -63,9 +73,9 @@ $BLOCK_NAME: ".top-about";
     border: 4px solid g.$c_white;
     border-radius: 50%;
     box-shadow: g.$shadow_default;
-    // @at-root .about-section__content-item:nth-child(even) & {
-    //   left: 8px;
-    // }
+    @at-root #{ $BLOCK_NAME }__content:nth-child(even) & {
+      left: 8px;
+    }
     @include g.Mq(lg) {
       width: 120px;
       height: 120px;
