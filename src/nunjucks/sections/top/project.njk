@@ -1,3 +1,4 @@
+{%- from '../../components/button.njk' import md as BUTTON -%}
 {% set PROJECT_ITEMS = [
   {
     description: {
@@ -92,21 +93,21 @@
     </p>
 
     {% for ITEM in PROJECT_ITEMS %}
-      <div class="">
+      <div class="top-project__item">
         <div class="">
-          <div class="">
-            <div class="">
+          <div class="top-project__description">
+            <div class="top-project__description-content">
               <h3>{{ ITEM.description.heading }}</h3>
               <p>{{ ITEM.description.text }}</p>
             </div>
-            <div class="">
+            <div class="top-project__description-img">
               <img src="/{{ CONSTANTS.SITE_ROOT }}img/top/{{ ITEM.description.img }}" alt="">
               {# {{ projects.img( img="img/project/project1-main.jpg" ) }} #}
             </div>
           </div>
-          <div class="">
+          <div class="top-project__links">
             {% for LINK in ITEM.links %}
-              <div class="">
+              <div class="top-project__link">
                 <img src="/{{ CONSTANTS.SITE_ROOT }}img/top/{{ LINK.img }}" alt="">
                 {# {{ projects.card(
                   link=item.link,
@@ -117,12 +118,11 @@
               </div>
             {% endfor %}
           </div>
-          <div class="">
-            {{ ITEM.description.href }}一覧を見る
-            {# {{ button.md(
-              url="#",
+          <div class="top-project__button">
+            {{ BUTTON(
+              url=ITEM.description.href,
               text="一覧を見る"
-            ) }} #}
+            ) }}
           </div>
         </div>
       </div>
