@@ -1,4 +1,16 @@
-{% macro default( link="", img="", heading="", text="" ) %}
+{% macro main( img="", heading="", text="" ) %}
+  <div class="top-project__description">
+    <div class="top-project__description-content">
+      <h3>{{ heading }}</h3>
+      <p>{{ text }}</p>
+    </div>
+    <div class="top-project__description-img">
+      <img src="{{ img }}" alt="">
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro link( link="", img="", heading="", text="" ) %}
 <a href="{{ link }}" class="project-card">
   <div class="project-card__img">
     <img
