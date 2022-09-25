@@ -11,8 +11,8 @@
 {% endmacro %}
 
 {% macro link( link="", img="", heading="", text="" ) %}
-<a href="{{ link }}" class="project-card">
-  <div class="project-card__img">
+<a href="{{ link }}" class="top-project-card">
+  <div class="top-project-card__img">
     <img
       src="{{ img }}"
       width="64"
@@ -20,9 +20,9 @@
       alt=""
     >
   </div>
-  <div class="project-card__content">
-    <h4 class="project-card__heading">{{ heading }}</h4>
-    <p class="project-card__text">{{ text }}</p>
+  <div class="top-project-card__content">
+    <h4 class="top-project-card__heading">{{ heading }}</h4>
+    <p class="top-project-card__text">{{ text }}</p>
   </div>
 </a>
 {% endmacro %}

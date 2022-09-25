@@ -2,4 +2,34 @@
 
 $BLOCK_NAME: ".top-project-card";
 
-#{ $BLOCK_NAME } {}
+#{ $BLOCK_NAME } {
+  display: flex;
+
+  &__img {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    border-radius: g.$radius_small;
+  }
+
+  &__content {
+    flex-grow: 1;
+    padding-left: 8px;
+    transition: color g.$duration_fast g.$ease_default;
+    @at-root #{ $BLOCK_NAME }:hover & {
+      color: g.$c_primary;
+    }
+  }
+
+  &__heading {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__text {
+    width: 100%;
+    margin-top: 8px;
+    font-size: 12px;
+  }
+}
