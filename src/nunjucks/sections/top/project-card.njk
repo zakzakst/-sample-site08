@@ -1,10 +1,10 @@
 {% macro main( img="", heading="", text="" ) %}
-  <div class="top-project__description">
-    <div class="top-project__description-content">
-      <h3>{{ heading }}</h3>
-      <p>{{ text }}</p>
+  <div class="top-project-description">
+    <div class="top-project-description__content">
+      <h3 class="top-project-description__heading">{{ heading }}</h3>
+      <p class="top-project-description__text">{{ text }}</p>
     </div>
-    <div class="top-project__description-img">
+    <div class="top-project-description__img">
       <img src="{{ img }}" alt="">
     </div>
   </div>
